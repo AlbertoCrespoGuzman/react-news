@@ -3,10 +3,10 @@ import  { loadHomeLikedSuccess } from './../actions'
 
 function *getHomeLiked(axios, actions){
     if(!actions.categoryName){
-        const dados = yield axios.get('http://your domain.com/liked/')
+        const dados = yield axios.get('http://noticieiro.com/liked/')
         yield put(loadHomeLikedSuccess(dados.data))
     }else{
-        const dados = yield axios.get('http://your domain.com/liked/category/' + actions.categoryName)
+        const dados = yield axios.get('http://noticieiro.com/liked/category/' + actions.categoryName)
         yield put(loadHomeLikedSuccess(dados.data))
     }
   
