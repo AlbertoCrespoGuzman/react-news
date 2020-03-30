@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "noticieiro_react",
+=======
+  "name": "noticieiro-react",
+>>>>>>> 0357fdf81cd221ad95ba7d119260aa2642a899ea
   "version": "0.1.0",
   "private": true,
   "dependencies": {
