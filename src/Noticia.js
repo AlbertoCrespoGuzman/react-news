@@ -291,7 +291,7 @@ class Noticia extends Component{
                                     
                                     <IconButton id="facebook_browser">
                                     <FacebookShareButton 
-                                            url={`http://noticieiro.com:3444/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}>
+                                            url={`http://noticieiro.com/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}>
                                         <Avatar style = {{background: '#365899'}}>
                                                 <i className="fa fa-facebook" aria-hidden="true" style={{color: '#FFFFFF', }}></i>
                                         </Avatar>
