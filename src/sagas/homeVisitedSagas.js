@@ -3,10 +3,10 @@ import  { loadHomeVisitedSuccess } from './../actions'
 
 function *getHomeVisited(axios, actions){
     if(!actions.categoryName){
-        const dados = yield axios.get('http://your domain.com/visited/')
+        const dados = yield axios.get('http://noticieiro.com/visited/')
         yield put(loadHomeVisitedSuccess(dados.data))
     }else{
-        const dados = yield axios.get('http://your domain.com/visited/category/' + actions.categoryName)
+        const dados = yield axios.get('http://noticieiro.com/visited/category/' + actions.categoryName)
         yield put(loadHomeVisitedSuccess(dados.data))
     }
     
