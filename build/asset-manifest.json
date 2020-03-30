@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/static/js/main.ca1d8f76.chunk.js",
+    "main.js.map": "/static/js/main.ca1d8f76.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.d22e0148.chunk.js": "/static/js/2.d22e0148.chunk.js",
+    "static/js/2.d22e0148.chunk.js.map": "/static/js/2.d22e0148.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2ec900cea2462181baa5a81832463a7e.js": "/precache-manifest.2ec900cea2462181baa5a81832463a7e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/logo-large-complete-business.png": "/static/media/logo-large-complete-business.ea35a7af.png",
+    "static/media/logo-large-complete-entertainment.png": "/static/media/logo-large-complete-entertainment.1a77aaf9.png",
+    "static/media/logo-large-complete-general.png": "/static/media/logo-large-complete-general.b09317b6.png",
+    "static/media/logo-large-complete-health.png": "/static/media/logo-large-complete-health.5cd23a19.png",
+    "static/media/logo-large-complete-science.png": "/static/media/logo-large-complete-science.ebf0e2d1.png",
+    "static/media/logo-large-complete-sports.png": "/static/media/logo-large-complete-sports.f24eb165.png"
+  }
+}
