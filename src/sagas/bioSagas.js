@@ -1,6 +1,7 @@
 import { put } from 'redux-saga/effects'
 import  { loadBioSuccess } from './../actions'
 
+import dotenv from 'dotenv'
 dotenv.config()
 
 function *getBio(axios){

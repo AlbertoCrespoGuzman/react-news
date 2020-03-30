@@ -1,5 +1,6 @@
 import { put } from 'redux-saga/effects'
 import  { loadNoticiaSuccess } from './../actions'
+import dotenv from 'dotenv'
 dotenv.config()
 
 function *getNoticia(axios, actions){

@@ -1,5 +1,6 @@
 import { put } from 'redux-saga/effects'
 import  { loadHomeSuccess } from './../actions'
+import dotenv from 'dotenv'
 dotenv.config()
 
 function *getHome(axios, actions){
