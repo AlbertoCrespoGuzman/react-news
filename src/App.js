@@ -1,3 +1,5 @@
+
+
 import React, { useState }  from 'react'
 import logoGeneral from  './images/logo-large-complete-general.png'
 import logoSports from  './images/logo-large-complete-sports.png'
@@ -43,6 +45,7 @@ import {
 } from "react-device-detect"
 import AdSense from 'react-adsense'
 import Bio from './Bio'
+require('dotenv').config()
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -193,10 +196,10 @@ function App (){
             <MenuItem  component={ Link } to="https://newsapi.org" onClick={handleMobileMenuClose}>
                   <FontAwesomeIcon icon={Icons.faHandHolding} style={{color: "#FFFFFF", marginRight: 10}} /> Powered by NewsAPI.org
             </MenuItem>
-            <MenuItem  component={ Link } to="http://noticieiro.com/privacy" onClick={handleMobileMenuClose}>
+            <MenuItem  component={ Link } to={"http://" + process.env.domain + "/privacy"} onClick={handleMobileMenuClose}>
                   <FontAwesomeIcon icon={Icons.faBook} style={{color: "#FFFFFF", marginRight: 10}} /> Política privacidade
             </MenuItem>
-            <MenuItem  component={ Link } to="http://noticieiro.com/about" onClick={handleMobileMenuClose}>
+            <MenuItem  component={ Link } to={"http://" + process.env.domain + "/about"} onClick={handleMobileMenuClose}>
                   <FontAwesomeIcon icon={Icons.faQuestion} style={{color: "#FFFFFF", marginRight: 10}} /> Sobre
             </MenuItem>
           </Menu>
@@ -215,7 +218,7 @@ function App (){
                       <Box height = {60} weight = {50} >
                         <CardMedia
                           height={'80'}
-                          component="Link" to="http://noticieiro.com"
+                          component="Link" to={"http://" + process.env.domain}
                           src={logo.logo} component="img"
                         />
                       </Box>
@@ -342,8 +345,8 @@ function App (){
                         <div style={{marginTop:-30}}>
                         <a href="https://newsapi.org" target="_blank" style={{marginRight:10, color: '#8f8f8f'}}>powered by NewsAPI.org</a> 
                         
-                        | <a  style={{marginRight:10, color: '#8f8f8f'}} href='http://noticieiro.com/privacy'  title='Política de Privacidade' target="_blank">Política de Privacidade</a>
-                        | <a  style={{marginRight:10, color: '#8f8f8f'}} href='http://noticieiro.com/about' title='Sobre' target="_blank">Sobre  </a>
+                        | <a  style={{marginRight:10, color: '#8f8f8f'}} href='http://process.env.domain.com/privacy'  title='Política de Privacidade' target="_blank">Política de Privacidade</a>
+                        | <a  style={{marginRight:10, color: '#8f8f8f'}} href='http://process.env.domain.com/about' title='Sobre' target="_blank">Sobre  </a>
                         </div>
                           </Toolbar>
                       </AppBar>    
@@ -355,12 +358,12 @@ function App (){
                             <Typography  gutterBottom variant="subtitle1" component="span" style={{fontSize: 13, color: '#FFFFFF'}}>
                                 Seguir:
                             </Typography>
-                            <IconButton component="a"  href="https://www.instagram.com/noticieiro_noticias/" target="_blank">
+                            <IconButton component="a"  href="https://www.instagram.com/process.env.domain_noticias/" target="_blank">
                                 <Avatar style = {{ fontSize: 30, background: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%'}}>
                                     <strong style={{marginTop: 2}}><i className="fa fa-instagram" aria-hidden="true" style={{color: '#FFFFFF' }}></i></strong>
                                 </Avatar>
                             </IconButton>
-                            <IconButton component="a" href="https://www.facebook.com/noticieiro-do-Brasil-2016043141979251" target="_blank">
+                            <IconButton component="a" href="https://www.facebook.com/process.env.domain-do-Brasil-2016043141979251" target="_blank">
                                     
                                 <Avatar style = {{background: '#365899'}}>
                                         <i className="fa fa-facebook" aria-hidden="true" style={{color: '#FFFFFF', }}></i>
