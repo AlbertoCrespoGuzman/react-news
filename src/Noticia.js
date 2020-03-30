@@ -175,7 +175,7 @@ class Noticia extends Component{
                 
                 onClick={() => {
                     if(!this.state.uppedComment[comment._id]){
-                        axios.get('http://noticieiro.com/comments/up/' + comment._id)
+                        axios.get('http://noticieiro.com:3444/comments/up/' + comment._id)
                         .then(() => {
                             comment.up = Number(comment.up) + 1
                            
@@ -247,7 +247,7 @@ class Noticia extends Component{
                                         
                                         onClick={() => {
                                             if(!this.state.upped){
-                                                axios.get('http://noticieiro.com/api/noticias/up/' + this.props.noticia._id).then(() => {
+                                                axios.get('http://noticieiro.com:3444/api/noticias/up/' + this.props.noticia._id).then(() => {
                                                     this.props.noticia.up = this.props.noticia.up + 1
                                                     this.setState({
                                                         upped: true
@@ -291,7 +291,7 @@ class Noticia extends Component{
                                     
                                     <IconButton id="facebook_browser">
                                     <FacebookShareButton 
-                                            url={`http://noticieiro.com/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}>
+                                            url={`http://noticieiro.com:3444/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}>
                                         <Avatar style = {{background: '#365899'}}>
                                                 <i className="fa fa-facebook" aria-hidden="true" style={{color: '#FFFFFF', }}></i>
                                         </Avatar>
@@ -456,7 +456,7 @@ class Noticia extends Component{
                                                     description: this.state.commentDescription,
                                                     up: 0
                                                 }
-                                                axios.post('http://noticieiro.com/comments/', form)
+                                                axios.post('http://noticieiro.com:3444/comments/', form)
                                                 .then((resp) => {
                                                     console.log('respons', resp)
                                                     this.props.comments.push(resp.data)
