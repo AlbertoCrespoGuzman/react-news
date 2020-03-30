@@ -175,7 +175,7 @@ class Noticia extends Component{
                 
                 onClick={() => {
                     if(!this.state.uppedComment[comment._id]){
-                        axios.get('http://' + process.env.DOMAIN + '/comments/up/' + comment._id)
+                        axios.get('http://noticieiro.com/comments/up/' + comment._id)
                         .then(() => {
                             comment.up = Number(comment.up) + 1
                            
@@ -247,7 +247,7 @@ class Noticia extends Component{
                                         
                                         onClick={() => {
                                             if(!this.state.upped){
-                                                axios.get('http://' + process.env.DOMAIN + '/api/noticias/up/' + this.props.noticia._id).then(() => {
+                                                axios.get('http://noticieiro.com/api/noticias/up/' + this.props.noticia._id).then(() => {
                                                     this.props.noticia.up = this.props.noticia.up + 1
                                                     this.setState({
                                                         upped: true
@@ -291,7 +291,7 @@ class Noticia extends Component{
                                     
                                     <IconButton id="facebook_browser">
                                     <FacebookShareButton 
-                                            url={`http://${process.env.DOMAIN}/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}>
+                                            url={`http://noticieiro.com/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}>
                                         <Avatar style = {{background: '#365899'}}>
                                                 <i className="fa fa-facebook" aria-hidden="true" style={{color: '#FFFFFF', }}></i>
                                         </Avatar>
@@ -300,7 +300,7 @@ class Noticia extends Component{
                                     
                                     <IconButton id="twitter_browser">
                                     <TwitterShareButton 
-                                            url={`http://${process.env.DOMAIN}/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}
+                                            url={`http://noticieiro.com/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}
                                             title={this.props.noticia.title}>
                                         <Avatar style = {{background: '#1b95e0'}}>
                                         
@@ -319,7 +319,7 @@ class Noticia extends Component{
                                     </Typography><br></br>
                                         <IconButton id="whatsapp_mobile">
                                             <WhatsappShareButton  
-                                                url={`http://${process.env.DOMAIN}/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}
+                                                url={`http://noticieiro.com/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}
                                                 title={this.props.noticia.title}>
                                             <Avatar style = {{background: '#07e676'}}>
                                                 <i className="fa fa-whatsapp" aria-hidden="true" style={{color: '#FFFFFF', }}></i>
@@ -328,7 +328,7 @@ class Noticia extends Component{
                                         </IconButton>
                                         <IconButton id="telegram_mobile">
                                             <TelegramShareButton 
-                                                url={`http://${process.env.DOMAIN}/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}
+                                                url={`http://noticieiro.com/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}
                                                 title={this.props.noticia.title}>
                                             <Avatar style = {{background: '#259cd7'}}>
                                               <i class="fa fa-telegram" aria-hidden="true"></i>
@@ -338,7 +338,7 @@ class Noticia extends Component{
                                         </IconButton>
                                     <IconButton id="facebook_mobile">
                                     <FacebookShareButton 
-                                            url={`http://${process.env.DOMAIN}/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}>
+                                            url={`http://noticieiro.com/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}>
                                         <Avatar style = {{background: '#365899'}}>
                                                 <i className="fa fa-facebook" aria-hidden="true" style={{color: '#FFFFFF', }}></i>
                                         </Avatar>
@@ -347,7 +347,7 @@ class Noticia extends Component{
                                     
                                     <IconButton id="twitter_mobile">
                                     <TwitterShareButton 
-                                            url={`http://${process.env.DOMAIN}/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}
+                                            url={`http://noticieiro.com/lnoticias/${this.props.noticia._id}/category/${this.props.categoryName}`}
                                             title={this.props.noticia.title}>
                                         <Avatar style = {{background: '#1b95e0'}}>
                                         
@@ -456,7 +456,7 @@ class Noticia extends Component{
                                                     description: this.state.commentDescription,
                                                     up: 0
                                                 }
-                                                axios.post('http://' + process.env.DOMAIN + '/comments/', form)
+                                                axios.post('http://noticieiro.com/comments/', form)
                                                 .then((resp) => {
                                                     console.log('respons', resp)
                                                     this.props.comments.push(resp.data)
