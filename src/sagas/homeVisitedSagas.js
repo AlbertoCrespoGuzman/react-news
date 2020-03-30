@@ -8,7 +8,7 @@ function *getHomeVisited(axios, actions){
         const dados = yield axios.get('http://' + process.env.DOMAIN  + ':' + process.env.PORT + '/visited/')
         yield put(loadHomeVisitedSuccess(dados.data))
     }else{
-        const dados = yield axios.get('http://' + process.env.DOMAIN  + ':' + process.env.PORT +  '/visited/category/' + actions.categoryName)
+        const dados = yield axios.get('http://noticieiro.com:3444/visited/category/' + actions.categoryName)
         yield put(loadHomeVisitedSuccess(dados.data))
     }
     

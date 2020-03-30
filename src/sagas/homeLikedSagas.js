@@ -5,10 +5,10 @@ dotenv.config()
 
 function *getHomeLiked(axios, actions){
     if(!actions.categoryName){
-        const dados = yield axios.get('http://' + process.env.DOMAIN  + ':' + process.env.PORT +  '/liked/')
+        const dados = yield axios.get('http://noticieiro.com:3444/liked/')
         yield put(loadHomeLikedSuccess(dados.data))
     }else{
-        const dados = yield axios.get('http://' + process.env.DOMAIN  + ':' + process.env.PORT +  '/liked/category/' + actions.categoryName)
+        const dados = yield axios.get('http://noticieiro.com:3444/liked/category/' + actions.categoryName)
         yield put(loadHomeLikedSuccess(dados.data))
     }
   
