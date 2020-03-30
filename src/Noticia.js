@@ -42,7 +42,7 @@ import {
     WhatsappShareButton } from 'react-share'
     
   import AdSense from 'react-adsense' 
-  require('dotenv').config()
+  dotenv.config()
 
 class Noticia extends Component{
 

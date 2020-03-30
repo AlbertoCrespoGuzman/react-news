@@ -1,6 +1,6 @@
 import { put } from 'redux-saga/effects'
 import  { loadHomeLikedSuccess } from './../actions'
-require('dotenv').config()
+dotenv.config()
 
 function *getHomeLiked(axios, actions){
     if(!actions.categoryName){

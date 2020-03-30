@@ -45,7 +45,7 @@ import {
 } from "react-device-detect"
 import AdSense from 'react-adsense'
 import Bio from './Bio'
-require('dotenv').config()
+dotenv.config()
 
 const sagaMiddleware = createSagaMiddleware()
 

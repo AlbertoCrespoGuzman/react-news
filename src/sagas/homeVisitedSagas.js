@@ -1,6 +1,6 @@
 import { put } from 'redux-saga/effects'
 import  { loadHomeVisitedSuccess } from './../actions'
-require('dotenv').config()
+dotenv.config()
 
 function *getHomeVisited(axios, actions){
     if(!actions.categoryName){
