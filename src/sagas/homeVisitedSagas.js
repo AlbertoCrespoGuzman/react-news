@@ -4,10 +4,10 @@ require('dotenv').config()
 
 function *getHomeVisited(axios, actions){
     if(!actions.categoryName){
-        const dados = yield axios.get('http://' + process.env.domain  + ':' + process.env.port + '/visited/')
+        const dados = yield axios.get('http://' + process.env.DOMAIN  + ':' + process.env.PORT + '/visited/')
         yield put(loadHomeVisitedSuccess(dados.data))
     }else{
-        const dados = yield axios.get('http://' + process.env.domain  + ':' + process.env.port +  '/visited/category/' + actions.categoryName)
+        const dados = yield axios.get('http://' + process.env.DOMAIN  + ':' + process.env.PORT +  '/visited/category/' + actions.categoryName)
         yield put(loadHomeVisitedSuccess(dados.data))
     }
     

@@ -3,7 +3,7 @@ import  { loadNoticiaSuccess } from './../actions'
 require('dotenv').config()
 
 function *getNoticia(axios, actions){
-        const dados = yield axios.get('http://' + process.env.domain + ':' + process.env.port + '/api/noticias/' + actions.id)
+        const dados = yield axios.get('http://' + process.env.DOMAIN + ':' + process.env.PORT + '/api/noticias/' + actions.id)
         
         yield put(loadNoticiaSuccess(dados.data, actions.categoryName, actions.id))
     
